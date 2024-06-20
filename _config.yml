@@ -1,12 +1,16 @@
-name: Matari Agro Indonesia, Konsultan dan Pusat Pelatihan Pertanian
+# Site meta data
+email: example@example.org
+url: "http://example.org"
+
+# not used by plugin but by liquid template
+languages: ['en', 'de']
+
+# Build settings
 markdown: kramdown
-permalink: /articles/:title
 
-plugins: ["jekyll-paginate", "jekyll-multiple-languages-plugin"]
+gems:
+- jekyll-sitemap
+- jekyll-language-plugin
 
-paginate: 12
-paginate_path: /articles/page:num/
-
-languages: ["id", "en"]
-
-exclude_from_localizations: ["javascript", "img", "images", "css", "scripts", "favicon.ico"]
+language_data: data.lang.%%
+language_includes_dir: _i18n
